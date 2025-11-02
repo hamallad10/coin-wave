@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinWave</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Film 🎬</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+    video {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+    footer {
+      margin-top: 30px;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Écran de Login -->
-    <div id="loginScreen" class="screen active">
-        <div class="container">
-            <h1>🌊 CoinWave</h1>
-            <div class="auth-form">
-                <h2>Connexion</h2>
-                <input type="email" id="loginEmail" placeholder="Email">
-                <input type="password" id="loginPassword" placeholder="Mot de passe">
-                <button onclick="app.login()">Se connecter</button>
-                
-                <h2>Inscription</h2>
-                <input type="email" id="registerEmail" placeholder="Email">
-                <input type="password" id="registerPassword" placeholder="Mot de passe">
-                <button onclick="app.register()">Créer un compte</button>
-            </div>
-        </div>
-    </div>
+  <h1>🎬 Mon Film</h1>
+  <video controls poster="poster.jpg">
+    <source src="https://ton-site.net/videos/AgADegQAAtz7UFE.mp4" type="video/mp4">
+    Ton navigateur ne supporte pas la lecture vidéo.
+  </video>
 
-    <!-- Application Principale -->
-    <div id="appScreen" class="screen">
-        <div class="container">
-            <header>
-                <h1>🌊 CoinWave</h1>
-                <button onclick="app.logout()">Déconnexion</button>
-            </header>
-            
-            <div class="balance">
-                <h2>Solde : <span id="tokenBalance">0</span> coins</h2>
-                <p><span id="moneyBalance">0.00€</span></p>
-            </div>
-
-            <div class="actions">
-                <button onclick="app.watchAd()">📺 Regarder une pub (+10 coins)</button>
-                <button onclick="app.showSurveys()">📝 Sondages (+50 coins)</button>
-                <button onclick="app.showWithdraw()">💸 Retirer</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Chargement des scripts -->
-    <script type="module" src="app.js"></script>
+  <footer>
+    © 2025 MonSiteFilms - Tous droits réservés
+  </footer>
 </body>
 </html>
